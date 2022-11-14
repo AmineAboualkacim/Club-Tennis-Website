@@ -1,0 +1,516 @@
+/* Utilities */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    background: #f2f2f2;
+}
+
+nav {
+    background: #1b1b1b;
+}
+
+img {
+    vertical-align: middle;
+}
+/* NavBar */
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo{
+   float: left;
+   color: white;
+   font-size: 27px;
+   font-weight: 600;
+   line-height: 70px;
+   padding-left: 60px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    float: none;
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 15px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff,
+                0 0 5px #66ffff;
+}
+
+nav ul ul li a:hover{
+    color: cyan;
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s;
+}
+
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+/* Home Page */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+.column-left {
+float: left;
+width: 20%;
+margin-top: 16px;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.column-left .card img {
+    height: 900px;
+    max-width: auto;
+    object-fit: contain;
+    width: 100%;
+}
+
+.column-center {
+float: left;
+width: 60%;
+margin-top: 16px;
+margin-bottom: 16px;
+padding: 0 8px;
+text-align: center;
+}
+
+.column-center .card img {
+    height: 900px;
+    max-width: auto;
+    object-fit: contain;
+    width: 90%;
+}
+.column-right {
+float: left;
+width: 20%;
+margin-top: 16px;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.column-right .card img {
+    height: 900px;
+    max-width: auto;
+    object-fit: contain;
+    width: 100%;
+}
+
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+margin: 8px;
+}
+
+.about-section {
+padding: 50px;
+text-align: center;
+color: white;
+margin: 0 500px;
+}
+
+.about-title {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.container {
+padding: 0 16px;
+}
+
+.container p {
+    margin: 5px;
+}
+
+.container::after, .row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.title {
+color: grey;
+}
+
+.button {
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: black;
+text-align: center;
+cursor: pointer;
+width: 100%;
+}
+
+.button:hover {
+background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+.column {
+    width: 100%;
+    display: block;
+}
+}
+
+/* Officers Page */
+.column-main1 {
+    float: left;
+    width: 26.667%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    text-align: center;
+}
+ 
+.column-side1 {
+    float: left;
+    width: 10%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    text-align: center;
+}
+
+.column-side2 {
+    float: left;
+    width: 10%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    text-align: center;
+}
+
+.column-main1-1 {
+    float: left;
+    width: 30%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    text-align: center;
+}
+ 
+.column-side1-1 {
+    float: left;
+    width: 20%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    text-align: center;
+}
+
+.column-side2-2 {
+    float: left;
+    width: 20%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    text-align: center;
+}
+
+.column-main1 .card img {
+    height: 400px;
+    max-width: auto;
+    object-fit: contain;
+    width: 90%;
+}
+
+.column-main1-1 .card img {
+    height: 400px;
+    max-width: auto;
+    object-fit: contain;
+    width: 90%;
+}
+
+.column-side1 .card {
+    display: none;
+}
+
+.column-side2 .card {
+    display: none;
+}
+
+.column-side1-1 .card{
+    display: none;
+}
+
+.column-side2-2 .card{
+    display: none;
+}
+
+
+/* About Page */
+.column-left-1 {
+float: left;
+width: 25%;
+margin-top: 16px;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.column-left-1 .card {
+    display: none;
+}
+
+.column-center-1 {
+float: left;
+width: 50%;
+margin-top: 16px;
+margin-bottom: 16px;
+padding: 0 8px;
+text-align: center;
+}
+
+.column-center-1 .card img {
+    height:700px;
+    max-width: auto;
+    object-fit: contain;
+    width: 70%;
+    margin: 20px;
+}
+.column-right-1 {
+float: left;
+width: 25%;
+margin-top: 16px;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.column-right-1 .card {
+    display: none;
+}
+
+/* Socials */
+.Social-media{
+  display: flex;
+  justify-content: center;
+}
+
+.Social-media a{
+  display: flex;
+  background: #fff;
+  height: 45px;
+  width: 45px;
+  margin: 0 15px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 6px 6px 10px -1px rgba(0,124,196,0.15),
+              -6px -6px 10px -1px rgba(255,255,255,0.7);
+  border: 1px solid rgba(0, 124, 196, 0);
+  transition: transform 0.5s
+}
+
+
+.Social-media a:hover{
+  box-shadow:inset 4px 4px 6px -2px rgba(0,0,0,0.2),
+              inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                    -0.5px -0.5px 0px -1px rgba(255,255,255,1),
+                    0.5px 0.5px 0px rgba(0,0,0,0.15),
+                    0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 124, 196, 0.1);
+  transform: translateY(2px);
+}
+.Social-media a:hover i{
+  transform: scale(0.90);
+}
+.Social-media a:hover .fa-twitter{
+  color: #00acee;
+}
+.Social-media a:hover .fa-instagram{
+  color: #f14843;
+}
+.Social-media a:hover .fa-linkedin{
+    color: #00acee;
+}
+
+
+
+/* President Page */
+.column-left-1 {
+float: left;
+width: 25%;
+margin-top: 16px;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.column-left-1 .card {
+    display: none;
+}
+
+.column-center-1 {
+float: left;
+width: 50%;
+margin-top: 16px;
+margin-bottom: 16px;
+padding: 0 40px;
+text-align: center;
+}
+
+.column-center-1 .card img {
+    height:500px;
+    max-width: auto;
+    object-fit: contain;
+    width: 90%;
+    margin: 10px;
+}
+.column-right-1 {
+float: left;
+width: 25%;
+margin-top: 16px;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.column-right-1 .card {
+    display: none;
+}
+
+
+/* Footer */
+.site-footer
+{
+  background-color:black;
+  padding:10px 0 10px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:white;
+}
+.copyright-text
+{
+  margin: 0;
+  width: auto;
+  line-height: 40px;
+  color: white;
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:white;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+
